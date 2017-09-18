@@ -8,6 +8,7 @@ import java.security.spec.X509EncodedKeySpec;
 
 /**
  * Created by Maggie on 2017/9/18.
+ * rsa通过私钥签名与公钥验签
  */
 public class RSASIGNTEST {
 
