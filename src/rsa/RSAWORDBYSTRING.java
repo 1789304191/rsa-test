@@ -12,11 +12,11 @@ import java.security.spec.X509EncodedKeySpec;
 /**
  * Created by Maggie on 2017/9/15.
  */
-public class RSAWORDTEST {
+public class RSAWORDBYSTRING {
 
-    public static final String PUBLIC_KEY="MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIZGRwOr9FJ9fwzoLUQAETKXvc6tTKTckIZQAqsgicSSHwNgKaI1R8XIToB6j2qLxNONRwGYAYMGfqn0e7/WZf0CAwEAAQ==";
+    public static final String PUBLIC_KEY="MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIfQ0uo706IOsNnsujXIme3dz8ws37KuAuchDWxIQkOUhg+UgdbFlrqZDgoYzHJ8Y1/ZXwGeX5PvAt1llVuhhiECAwEAAQ==";
 
-    public static final String PRIVATE_KEY="MIIBVQIBADANBgkqhkiG9w0BAQEFAASCAT8wggE7AgEAAkEAhkZHA6v0Un1/DOgtRAARMpe9zq1MpNyQhlACqyCJxJIfA2ApojVHxchOgHqPaovE041HAZgBgwZ+qfR7v9Zl/QIDAQABAkAiBeCsn3+S/1WYEaSWnGW/Kg/gNK09AN5mChQDBIWkFvwYd+ljRn1vn3/zIOdjMFqJNQ0F2CfGhAdGLuKw3JMBAiEAyXj3wHglZlk9JyMstfNsaUMy63eRp0SCTetCuApcAB0CIQCqnX4uOcHs+/3TTl4+iC08hcir93YIX9F1jyYM2MrXYQIhAJzk0yrTZWyaugCsZ7kZ46bladXsu0SjGUZMmxxvFM4RAiEAjFVIYRsusA9A4toV2JdHpf1gZln/orm1Xl2k7XIvvWECIHhn4K70EhpknH02KLTWQ5Z4PzVzj0iFtN+OsMBFGaIM";
+    public static final String PRIVATE_KEY="MIIBUwIBADANBgkqhkiG9w0BAQEFAASCAT0wggE5AgEAAkEAh9DS6jvTog6w2ey6NciZ7d3PzCzfsq4C5yENbEhCQ5SGD5SB1sWWupkOChjMcnxjX9lfAZ5fk+8C3WWVW6GGIQIDAQABAkB4m9phhkV3WaJ1tILcdksz8FGzWHpC+8K6LCD2cujdh3H65ggkrF4ZfjTODDEMne2sVUW821/Hy0+/5pCoGMcdAiEA/U3LZ2rJdbTdgm9yyRiiEvkVoCJnwkyB5cK/hhKjt38CIQCJQuVr/zzp/+lp5m8IhlLhlXPjCZgl+ylApikv2saSXwIgHVjrDRNRPgLzew5AhU4GUR5sw/3Yeal1j1It8HGuaC8CIAaeSyGh9PXzePW6PrBSibyG0EeqNsPeEGclm+bKzbhRAiAl31t0VyyfDmYNIQwF2MREXaG7WtK1z4a3xnUxUxUv8g==";
 
     public static final String CIPHER_ALGORITHM = "RSA";
 
@@ -66,7 +66,7 @@ public class RSAWORDTEST {
 
 
     public static void main(String[] args) throws Exception {
-        String s=new String(Base64.encodeBase64(encrypt("12345678".getBytes())));
+        String s=new String(Base64.encodeBase64(encrypt("zaq1XSW@".getBytes())));
         System.out.println("====12345678经过公钥加密之后===="+s);
         System.out.println("====私钥解密===="+new String(decrypt(Base64.decodeBase64(s.getBytes()))));
     }
