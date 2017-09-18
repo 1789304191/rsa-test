@@ -67,7 +67,7 @@ public class RSAWORDBYSTRING {
 
     public static void main(String[] args) throws Exception {
         String s=new String(Base64.encodeBase64(encrypt("zaq1XSW@".getBytes())));
-        System.out.println("====12345678经过公钥加密之后===="+s);
+        System.out.println("====zaq1XSW@经过公钥加密之后===="+s);
         System.out.println("====私钥解密===="+new String(decrypt(Base64.decodeBase64(s.getBytes()))));
     }
 }
